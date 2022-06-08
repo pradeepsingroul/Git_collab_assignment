@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens Page</title>
+    <style>
+        #container{
+       display:grid;
+       grid-template-columns: repeat(2,200px);
+       gap: 40px;
+   }
+   </style>
+</head>
+<body>
+    <h1>MensPage</h1>
+    <div id="container"></div> 
+</body>
+</html>
+
+<script>
+    var mensData = [
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4296/reebok_EX4296_1.jpg.plp",
+      name: "MEN'S REEBOK RUNNING ROADMAP SHOES",
+      price: "1170",
+      strikedoffprice: "$2599",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX3921/reebok_EX3921_1.jpg.plp",
+      name: "MEN'S REEBOK SWIM ARUBA FLIP SLIPPERS ",
+      price: 699,
+      strikedoffprice: 999,
+    }
+    ];
+    mensData.forEach(function(el){
+      var parent=document.createElement("div");
+      var img=document.createElement("img");
+      img.setAttribute("src",el.image_url);
+      var p1=document.createElement("p");
+      p1.innerText=el.name;
+      var p2=document.createElement("p");
+      p2.innerText=el.price;
+     
+      parent.append(img,p1,p2);
+      document.querySelector("#container").append(parent)
+  });
+</script>
