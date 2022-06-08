@@ -1,0 +1,15 @@
+
+Studentt-1  
+  ==> name-Rahul chandel  
+  ==> git username - Rahulchandel-coder1
+  ==> email - rahulchandel2824@gmail.com
+
+student-2 
+  ==> name- saurabh magdum
+  ==> git username - Saurabhvmagdum
+  ==> email - saurabhvmagdum@gmail.com
+
+student-3
+  ==> name - Abhishek bhandari
+  ==> git username - abhi-shek-bhandari
+  ==> email - abhishekbhandari06@outlook.com
