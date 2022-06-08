@@ -6,7 +6,7 @@ Studentt-1
 
 student-2 
   ==> name- saurabh magdum
-  ==> git username - Saurabhvmagdum
+  ==> git username - saurabhvmagdum
   ==> email - saurabhvmagdum@gmail.com
 
 student-3
