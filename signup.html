@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+        body {
+            background-color: rgba(245, 245, 220, 0.273);
+            padding: 5%;
+        }
+        #total {
+            background-color: rgba(0, 0, 139, 0.818);
+            width: 25%;
+            height: 450PX;
+            padding: 3%;
+            box-shadow: 1px 5px 27px 0px rgba(128, 128, 128, 0.444);
+            border-radius: 7px;
+            margin: auto;
+            padding-right: 6% ;
+            padding-left: 6%;
+        }
+        input,button {
+            height: 31px;
+            width: 100%;
+            background-color: white;
+            margin-bottom: 5%;
+
+        }
+        #sub, button {
+           text-align: center;
+           background-color: rgb(1, 1, 71);
+           padding: 1%;
+           color: white;
+        }
+        #sub:hover, button:hover {
+            cursor: pointer;
+        }
+        h3 {
+            color: white;
+            font-weight: 800;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="total">
+        <h3>COMPANY NAME</h3>
+        <div>
+            <form id="form">
+                <input type="text" id="name" placeholder="   Full Name">
+                <input type="email" name="email" id="email" placeholder="   Email">
+                <input type="text" placeholder="   Organization" id="org">
+                <input type="password" id="pwd" placeholder="   password">
+                <input type="password" id="cpwd" placeholder="   confirm password">
+                <input type="submit" name="SIGN UP" id="sub">
+            </form>
+            <button>RETURN</button>
+        </div>
+    </div>
+</body>
+<script>
+    var form = document.getElementById("form");
+    form.addEventListener("submit",myfunc1);
+    function myfunc1(){
+        event.preventDefault();
+        var email = form.email.value;
+        var pwd = form.pwd.value;
+        var cpwd = form.cpwd.value;
+        if(pwd != cpwd){
+            alert("Password doesn't Match");
+        }
+        else {
+            var array = JSON.parse(localStorage.getItem("userData"))|| [];
+            var obj = {
+                Email:form.email.value,
+                password : form.pwd.value
+            }
+            array.push(obj);
+        localStorage.setItem("userData",JSON.stringify(array));
+            alert("Signup completed");
+            location.assign("login.html");
+        }
+    }
+</script>
+</html>
